@@ -1,6 +1,19 @@
+/* Christmas Red: #C0392B
+Christmas Green: #32CD32
+Snow White: #FFFFFF
+Supporting Colors:
+
+Gold: #FFD700
+Silver: #C0C0C0 */
+
 html, body {
   height: 100%;
   margin: 0;
+  color: antiquewhite;
+}
+
+.header {
+  background-color: #C0392B
 }
 
 #root {
@@ -10,6 +23,8 @@ html, body {
 }
 
 footer.footer {  
+  justify-content: center;
+  color: black;
   text-align: center;
   padding: 1rem 0;
   margin-top: auto;
