@@ -27,9 +27,9 @@ export const Header = () => {
 
   return (
     <AppBar 
-    className="header">
+    >
       <Container>
-        <Toolbar disableGutters>
+        <Toolbar  className="header">
 
           <Typography
             variant="h6"
@@ -46,7 +46,7 @@ export const Header = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Bobe's Holiday Card Emporium
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -85,8 +85,8 @@ export const Header = () => {
           </Box>
           {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
-            variant="h5"
-            noWrap
+            variant="h6"
+            
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
@@ -100,7 +100,7 @@ export const Header = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+             Bobe's Holiday Card Emporium
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (

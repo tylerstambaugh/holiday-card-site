@@ -23,6 +23,7 @@ html, body {
 }
 
 footer.footer {  
+  font: 1em roboto;
   justify-content: center;
   color: black;
   text-align: center;
