@@ -22,7 +22,7 @@ html, body {
   min-height: 100vh;
 }
 
-footer.footer {  
+.footer {  
   font: 1em roboto;
   justify-content: center;
   color: black;
@@ -32,4 +32,16 @@ footer.footer {
   position: sticky;
   bottom: 0;
   width: 100%;
+}
+
+.fa_icon {
+  color: #000; /* Black color */
+  font-size: 23px; /* Adjust for medium size */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Medium viewports */
+  .fa-icon {
+    font-size: 25px; /* Add any additional styles specifically for medium viewports */
+  }
 }
