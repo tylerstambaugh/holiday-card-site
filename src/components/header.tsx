@@ -2,11 +2,13 @@ import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem
 import MenuIcon from '@mui/icons-material/Menu';
 import React from "react";
 import "../App.css"
+import { useNavigate } from "react-router-dom";
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Home', 'Archive'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export const Header = () => {
+    const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   // const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -26,7 +28,7 @@ export const Header = () => {
   // };
 
   return (
-    <AppBar 
+    <AppBar  className="header" 
     >
       <Container>
         <Toolbar  className="header">
@@ -34,8 +36,6 @@ export const Header = () => {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -77,7 +77,7 @@ export const Header = () => {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={() => {navigate(`/${page}`); handleCloseNavMenu()}}>
                   <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                 </MenuItem>
               ))}
@@ -88,25 +88,22 @@ export const Header = () => {
             variant="h6"
             
             component="a"
-            href="#app-bar-with-responsive-menu"
             sx={{
-              mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-             Bobe's Holiday Card Emporium
+             Bobe's Holiday Cards
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => {navigate(`/${page}`); handleCloseNavMenu()}}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
