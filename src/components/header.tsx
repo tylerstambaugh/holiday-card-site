@@ -1,10 +1,10 @@
-import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Button } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Button } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import React from "react";
 import "../App.css"
 import { useNavigate } from "react-router-dom";
 
-const pages = ['Home', 'Archive'];
+const pages = [{name: 'Home', route:'/'}, {name: 'Archive', route:'/archive'}];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export const Header = () => {
@@ -30,7 +30,6 @@ export const Header = () => {
   return (
     <AppBar  className="header" 
     >
-      <Container>
         <Toolbar  className="header">
 
           <Typography
@@ -77,8 +76,8 @@ export const Header = () => {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={() => {navigate(`/${page}`); handleCloseNavMenu()}}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                <MenuItem key={page.name} onClick={() => {navigate(`${page.route}`); handleCloseNavMenu()}}>
+                  <Typography sx={{ textAlign: 'center' }}>{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -102,11 +101,11 @@ export const Header = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={() => {navigate(`/${page}`); handleCloseNavMenu()}}
+                key={page.name}
+                onClick={() => {navigate(`${page.route}`); handleCloseNavMenu()}}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
@@ -139,7 +138,6 @@ export const Header = () => {
             </Menu>
           </Box> */}
         </Toolbar>
-      </Container>
     </AppBar>
   );
 }
