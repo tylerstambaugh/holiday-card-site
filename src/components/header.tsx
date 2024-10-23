@@ -28,7 +28,7 @@ export const Header = () => {
   // };
 
   return (
-    <AppBar  className="header" 
+    <AppBar className="header" 
     >
         <Toolbar  className="header">
 
@@ -48,7 +48,7 @@ export const Header = () => {
             Bobe's Holiday Card Emporium
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"

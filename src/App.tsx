@@ -1,5 +1,5 @@
 
-import {  Route,  BrowserRouter as Router, Routes } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import { Home } from './pages/home'
 import { Header } from './components/header'
@@ -9,16 +9,17 @@ import { Archive } from './pages/archive';
 
 function App() {
   return (
-    <Router>
+        <Router>
       <Header />
-      <Routes>
+      <main>
 
-          <Route index element={<Home />} />
-          <Route path="/Archive" element={<Archive />} />
-
-      </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/archive" element={<Archive />} />
+          </Routes>
+      </main>
       <Footer />
-    </Router>
+        </Router>
   );
 }
 
