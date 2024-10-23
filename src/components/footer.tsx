@@ -13,51 +13,45 @@ import '../App.css'
 export const Footer: React.FC = () => {
   return (
     <footer
-      className={`footer justify-content-center align-items-center`}
+      className={`footer`}
     >
-      <Container className="d-flex justify-content-center">
+      <Container className=" footer">
         <Stack
-          className="d-flex justify-content-around"
-          style={{
-            width: '100%',
-            
-          }}
-          direction="row"
-          spacing={2}
+          className="icon-container" direction="row" spacing={2}
         >
-            <a
-              href="https://github.com/tylerstambaugh"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faGithub} color="#333" size="2x" />
-            </a>
-            <a
-              href="https://www.strava.com/athletes/381648"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faStrava} color="#fc4c02" size="2x" />
-            </a>
-            <a
-              href="https://www.instagram.com/tyler_stambaugh/"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faInstagram} color="#c13584" size="2x" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/tyler-stambaugh-b274a59/"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faLinkedin} color="#0a66c2"  size="2x"/>
-            </a>
-            <a href="mailto:tyler.stambaugh@icloud.com" target="_blank">
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                size="2x"
-              />
-            </a>
-            </Stack>
-          <Stack className="text-center">
-            <p>Copyright 2024 Tyler Stambaugh</p>
+          <a
+            href="https://github.com/tylerstambaugh"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faGithub} color="#333" size="2x" />
+          </a>
+          <a
+            href="https://www.strava.com/athletes/381648"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faStrava} color="#fc4c02" size="2x" />
+          </a>
+          <a
+            href="https://www.instagram.com/tyler_stambaugh/"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faInstagram} color="#c13584" size="2x" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/tyler-stambaugh-b274a59/"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faLinkedin} color="#0a66c2" size="2x" />
+          </a>
+          <a href="mailto:tyler.stambaugh@icloud.com" target="_blank">
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              size="2x"
+            />
+          </a>
+        </Stack>
+        <Stack className="text-center">
+          <p>Copyright 2024 Tyler Stambaugh</p>
         </Stack>
       </Container>
     </footer>
