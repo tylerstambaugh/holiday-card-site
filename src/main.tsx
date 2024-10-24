@@ -6,7 +6,6 @@ import { Home } from './pages/home'
 import { Header } from './components/header'
 import { Footer } from './components/footer';
 import { Archive } from './pages/archive';
- import './index.css'
 
 
 const container = document.getElementById('root');
@@ -14,15 +13,14 @@ const root = createRoot(container!);
 root.render(
   <StrictMode>
     <Router>
+      <div className="app">
       <Header />
-      <main>
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/archive" element={<Archive />} />
         </Routes>
-      </main>
       <Footer />
+      </div>
     </Router>
   </StrictMode>,
 )
