@@ -6,10 +6,10 @@ export const Home: React.FC = () => {
 
     return (
         <Card>
-            
+
             <h3 className='text-center' >
 
-            2024 Year In Review
+                2024 Year In Review
             </h3>
             <p>It's been another fantastic year and it flew by quicker than the last. I started a new job in April with
                 <Link href={"http://www.redroverk12.com"} target={"_blank"}>
@@ -29,6 +29,8 @@ export const Home: React.FC = () => {
                 </Link>
                 They say time heals all wounds and that is proving to be the case. Cindy and I continue to adventure around central Indiana exploring all the sceneries and little towns by bike.
             </p>
+            <p>Thanks for stopping by and catching up. We hope you enjoy the cards as much as we like coming up with them and creating them.  </p>
+            <p>Until next year, Tyler, Cindy, Boone</p>
 
         </Card>
     )

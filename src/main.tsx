@@ -5,7 +5,7 @@ import './App.css'
 import { Home } from './pages/home'
 import { Header } from './components/header'
 import { Footer } from './components/footer';
-import { Archive } from './pages/archive';
+import { Archive } from './pages/archive'
 
 
 const container = document.getElementById('root');
