@@ -15,74 +15,62 @@ type ArchiveItem = {
     photoFrontPath: string;
     photoBackPath: string;
     year: number;
-    showBack: boolean;
 }
 export const Archive: React.FC = () => {
 
-    const [showPhotoBack, setShowPhotoBack] = useState<{ showBack: boolean, index: number }[]>([{ showBack: false, index: 1 }]);
+    //const [showPhotoBack, setShowPhotoBack] = useState<{ showBack: boolean, index: number }[]>([{ showBack: false, index: 1 }]);
+    const [showPhotoBack, setShowPhotoBack] = useState<boolean>(false);
+    const [expanded, setExpanded] = React.useState<string | false>(false);
 
     const archiveItems: ArchiveItem[] = [
         {
             photoFrontPath: Front2020,
             photoBackPath: Back2020,
             year: 2020,
-            showBack: false
         },
         {
             photoFrontPath: Front2021,
             photoBackPath: Back2021,
             year: 2021,
-            showBack: false
         },
         {
             photoFrontPath: Front2022,
             photoBackPath: Back2022,
             year: 2022,
-            showBack: false
         },
         {
             photoFrontPath: Front2023,
             photoBackPath: Back2023,
             year: 2023,
-            showBack: false
         },
     ]
+    const handleChange =
+        (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+            setExpanded(isExpanded ? panel : false);
+            setShowPhotoBack(false)
+        };
 
     return (
         <div>
 
             {archiveItems.map((item: ArchiveItem, index) => (
-                //need to populate the setShowPhotoBack state when creating the items. 
-                <Accordion key={index}>
+                <Accordion key={index} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1-content"
                         id={`panel${index}-header`}
+                        className="archive-accordion-header-selected"
                     >
                         {item.year}
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Box className={"arcive-photo-box"}>
-                            {showPhotoBack.find((i) => i.index === index)?.showBack ? (
-                                <img src={item.photoBackPath} className="arcive-photo-box" />
-                                ) : (
-                                    <img src={item.photoFrontPath} className="arcive-photo-box" />
-                                )
-                            }
+                        <Box className={"archive-photo-box"}>
+                            <ArchiveImage showBack={showPhotoBack} item={item} />
                         </Box>
-                        <Button onClick={() => {
-                            // Create a new state object with the updated showBack value
-                            const updatedShowPhotoBack = showPhotoBack.map((item) => {
-                                if (item.index + 1 === index) {
-                                    return { ...item, showBack: !item.showBack }; // Toggle showBack for the clicked item
-                                }
-                                return item; // Keep existing values for other items
-                            });
-                            console.log("updated show back", updatedShowPhotoBack);
-                            
-                            setShowPhotoBack(updatedShowPhotoBack);
+                        <Button variant="contained" onClick={() => {
+                            setShowPhotoBack(!showPhotoBack)
                         }}>
-                            {showPhotoBack.find((i) => i.index + 1 === index)?.showBack ? "Show Front" : "Show Back"}
+                            {showPhotoBack ? "Show Front" : "Show Back"}
                         </Button>
                     </AccordionDetails>
                 </Accordion>
@@ -92,4 +80,18 @@ export const Archive: React.FC = () => {
         </div>
     )
 
+}
+
+type ArchiveImageProps = {
+    showBack: boolean;
+    item: ArchiveItem;
+}
+
+const ArchiveImage = ({ showBack, item }: ArchiveImageProps) => {
+
+    return (
+
+        showBack ? <img src={item.photoBackPath} className="archive-photo" /> :
+            <img src={item.photoFrontPath} className="archive-photo" />
+    )
 }
