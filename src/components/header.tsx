@@ -1,4 +1,4 @@
-import { Toolbar, Typography, Box, IconButton, Menu, MenuItem, Button } from "@mui/material";
+import { Toolbar, Typography, Box, IconButton, Menu, MenuItem, Button, Link } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import React from "react";
 import "../App.css"
@@ -21,7 +21,7 @@ export const Header = () => {
   return (
 
         <Toolbar  className="header">
-
+      <Link variant="h6" underline="none" color="inherit" href="/">
           <Typography
             variant="h6"
             noWrap
@@ -35,8 +35,9 @@ export const Header = () => {
               textDecoration: 'none',
             }}
           >
-            Bobe's Holiday Card Emporium
+            Tyler's Holiday Card Emporium
           </Typography>
+              </Link>
 
           <Box sx={{ flexGrow: 1, display: { md: 'none' } }}>
             <IconButton
@@ -72,11 +73,9 @@ export const Header = () => {
               ))}
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+      <Link variant="h6" underline="none" color="inherit" href="/" >
           <Typography
-            variant="h6"
-            
-            component="a"
+            variant="h6"   
             sx={{
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
@@ -86,8 +85,9 @@ export const Header = () => {
               textDecoration: 'none',
             }}
           >
-             Bobe's Holiday Cards
+             Tyler's Holiday Cards
           </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
