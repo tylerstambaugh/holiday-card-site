@@ -6,7 +6,7 @@ export const Home: React.FC = () => {
 
     return (
         <Grid container spacing={2} justifyContent={"center"}>
-            <Grid size={{ xs: 6, md: 8 }}>
+            <Grid size={{ xs: 10, md: 8 }}>
 
                 <Typography variant="h3" align="center" className='home-title' >
                     2024 Year In Review
@@ -29,7 +29,7 @@ export const Home: React.FC = () => {
                     </Link>
                     {" "} They say time heals all wounds and that is proving to be the case. Cindy and I continue to adventure around central Indiana exploring all the sceneries and little towns by bike.
                 </Typography>
-                <Grid size={{ xs: 6, md: 8 }}>
+                <Grid size={{ xs: 10, md: 8 }}>
 
                 </Grid>
                 <Typography>Thanks for stopping by and catching up. We hope you enjoy the cards as much as we like coming up with them and creating them.  </Typography>
