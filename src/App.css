@@ -58,6 +58,9 @@ p {
   color: #000;
 }
 
+.home-title {
+  color: #32CD32;
+}
 .archive-accordion-header-selected {
   background-color: #FFD700;
 }

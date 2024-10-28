@@ -1,5 +1,7 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button } from "@mui/material"
 import React, { useState } from "react"
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button } from "@mui/material"
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Front2020 from '../assets/images/holiday-cards/2020_Corona.jpg';
 import Back2020 from '../assets/images/holiday-cards/2020_Corona_back.jpg';
@@ -17,8 +19,6 @@ type ArchiveItem = {
     year: number;
 }
 export const Archive: React.FC = () => {
-
-    //const [showPhotoBack, setShowPhotoBack] = useState<{ showBack: boolean, index: number }[]>([{ showBack: false, index: 1 }]);
     const [showPhotoBack, setShowPhotoBack] = useState<boolean>(false);
     const [expanded, setExpanded] = React.useState<string | false>(false);
 
@@ -90,8 +90,15 @@ type ArchiveImageProps = {
 const ArchiveImage = ({ showBack, item }: ArchiveImageProps) => {
 
     return (
+        showBack ? 
+        <Zoom>
 
-        showBack ? <img src={item.photoBackPath} className="archive-photo" /> :
+        <img src={item.photoBackPath} className="archive-photo" /> 
+        </Zoom>
+        :
+        <Zoom>
+            
             <img src={item.photoFrontPath} className="archive-photo" />
+        </Zoom>
     )
 }
