@@ -59,7 +59,15 @@ export const Archive: React.FC = () => {
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1-content"
                         id={`panel${index}-header`}
-                        className="archive-accordion-header-selected"
+                        sx={{
+                            '&.Mui-expanded': {
+                                backgroundColor: '#FFD700', // Style for expanded state
+                            },
+                            '&.Mui-collapsed': {
+                                backgroundColor: '#000', // Style for collapsed state
+                            },
+                           
+                        }}
                     >
                         {item.year}
                     </AccordionSummary>
@@ -74,10 +82,10 @@ export const Archive: React.FC = () => {
                         </Button>
                     </AccordionDetails>
                 </Accordion>
-            )
+    )
             )}
 
-        </div>
+        </div >
     )
 
 }
@@ -90,15 +98,15 @@ type ArchiveImageProps = {
 const ArchiveImage = ({ showBack, item }: ArchiveImageProps) => {
 
     return (
-        showBack ? 
-        <Zoom>
+        showBack ?
+            <Zoom>
 
-        <img src={item.photoBackPath} className="archive-photo" /> 
-        </Zoom>
-        :
-        <Zoom>
-            
-            <img src={item.photoFrontPath} className="archive-photo" />
-        </Zoom>
+                <img src={item.photoBackPath} className="archive-photo" />
+            </Zoom>
+            :
+            <Zoom>
+
+                <img src={item.photoFrontPath} className="archive-photo" />
+            </Zoom>
     )
 }
