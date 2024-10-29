@@ -48,9 +48,7 @@ main {
   text-align: center;
   color: black;
   padding: 1rem 0;
-  margin-top: auto;
   position: sticky;
-  bottom: 0;
   width: 100%;
 }
 
@@ -72,8 +70,8 @@ p {
 .archive-photo-box {
   justify-content: center;
   align-content: center;
-  min-width: 350px;
-  min-height: 350px;
+  min-width: auto;
+  min-height: auto;
 }
 
 .archive-photo {

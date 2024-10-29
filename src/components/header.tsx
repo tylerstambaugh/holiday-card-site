@@ -42,7 +42,6 @@ export const Header = () => {
           <Box sx={{ flexGrow: 1, display: { md: 'none' } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}

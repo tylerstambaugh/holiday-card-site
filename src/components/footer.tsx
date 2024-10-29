@@ -15,7 +15,8 @@ export const Footer: React.FC = () => {
     <footer
       className={`footer`}
     >
-      <Container className=" footer">
+      <hr />
+      <Container >
         <Stack
           className="icon-container" direction="row" spacing={2}
         >
