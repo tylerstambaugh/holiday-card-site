@@ -5,13 +5,13 @@ export const Home: React.FC = () => {
 
 
     return (
-        <Container maxWidth="lg">
-            <Box sx={{ minHeight: '100vh', flexGrow: 1 }}>
+        <Container>
+            <Box className={'main'}>
         <Grid container spacing={2} justifyContent={"center"}>
             <Grid size={{ xs: 10, md: 8 }}>
 
                 <Typography variant="h3" align="center" className='home-title' >
-                    2024 Year In Review
+                    2024 <br /> Year In Review
                 </Typography>
                 <Typography >It's been another fantastic year and it flew by quicker than the last. I started a new job in April with {" "}
                     <Link href={"http://www.redroverk12.com"} target={"_blank"}>
