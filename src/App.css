@@ -9,31 +9,24 @@ Silver: #C0C0C0 */
 
 
 #root {
-  display: flex;
-  min-height: 100vh;
+  display: flex; 
+   
 }
 
 
 html, body {
   font-family: -apple-system, monospace, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  height: 100%;
-  margin: 0;
   color: antiquewhite;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  flex: 1; 
-  min-height: 100vh;
 }
 
 .app {
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
   flex: 1; 
-  min-height: 100vh;
+  flex-grow: 1;
 }
+
 
 .header {
   background-color: #C0392B;
@@ -44,6 +37,7 @@ main {
 
 .footer {  
   font: 1em roboto;
+  margin-top: auto;
   justify-content: center;
   text-align: center;
   color: black;
@@ -79,9 +73,6 @@ p {
   max-width:350px;
   max-height: 350px;
 }
-
-
-
 
 .icon-container {
    width: 100%;
