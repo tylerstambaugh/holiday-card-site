@@ -15,28 +15,29 @@ Silver: #C0C0C0 */
 
 html, body {
   font-family: -apple-system, monospace, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: antiquewhite;
-  display: flex; 
+   background-image: url("./assets/images/background_cropped.jpg");
+  width: 100%;
 }
 
 .app {
   min-height: 100vh;
+  display: flex;
   flex-direction: column;
-  flex: 1; 
   flex-grow: 1;
-   background-image: url("./assets/images/background.jpg");
+ 
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
 }
 
-.home_container {
+.container {  
+  margin-top: 10px;
   background-color: beige;
+  padding-bottom: 10px;
 }
 
-
 .header {
-  background-color: #C0392B;
+  background-color: #8B0000;
   height: fit-content;
   display: flex;  
   flex-direction: row;
@@ -50,29 +51,42 @@ html, body {
   color: black;
   padding: 1rem 0;
   position: sticky;
-  width: auto;
 }
 
 p {
   color: #000;
 }
 
-.home-title {
-  color: #32CD32;
-}
-.archive-accordion-header-selected {
-  background-color: #FFD700;
-}
-
-.archive-accordion-header-unselected {
-  background-color: #C0C0C0;
+.title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: beige;
+  color: #228B22;
 }
 
-.archive-photo-box {
-  justify-content: center;
-  align-content: center;
-  min-width: auto;
-  min-height: auto;
+.accordion {
+     background-color: beige;
+     justify-content: center;
+}
+
+.accordion-summary {
+  display: flex;
+  text-align: center;
+}
+
+
+.accordion-details {
+       justify-content: center;
+  display: flex;
+  text-align: center;
+  background-color: beige;
+}
+
+.zoom-photo-box {
+         justify-content: center;
+  display: flex;
+  text-align: center;
+  background-color: beige;
 }
 
 .archive-photo {
@@ -81,9 +95,9 @@ p {
   max-height: 350px;
 }
 
-.icon-container {
-   width: 100%;
+.icon-container {  
    justify-content: center;
+    background-color: beige;
 }
 
 .fa_icon {

@@ -16,9 +16,9 @@ export const Footer: React.FC = () => {
       className={`footer`}
     >
       <hr />
-      <Container >
+      <Container>
         <Stack
-          className="icon-container" direction="row" spacing={2} sx={{ backgroundColor: "beige" }}
+          className="icon-container" direction="row" spacing={2}
         >
           <a
             href="https://github.com/tylerstambaugh"
@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
             />
           </a>
         </Stack>
-        <Stack className="text-center" sx={{backgroundColor: "beige"}}>
+        <Stack className="text-center" sx={{ backgroundColor: "beige" }}>
           <p>Copyright 2024 Tyler Stambaugh</p>
         </Stack>
       </Container>

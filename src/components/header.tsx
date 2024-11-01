@@ -21,18 +21,18 @@ export const Header = () => {
   return (
 
     <Toolbar className="header">
-      <Link variant="h6" underline="none" color="inherit" href="/">
+      <Link underline="none" color="inherit" href="/">
         <Typography
-          variant="h6"
+          variant="h3"
           noWrap
           sx={{
-            mr: 2,
+            // mr: 2,
+            // fontFamily: 'monospace',
+            // fontWeight: 700,
+            // letterSpacing: '.3rem',
+            // color: 'inherit',
+            // textDecoration: 'none',
             display: { xs: 'none', md: 'flex' },
-            fontFamily: 'monospace',
-            fontWeight: 700,
-            letterSpacing: '.3rem',
-            color: 'inherit',
-            textDecoration: 'none',
           }}
         >
           Tyler's Holiday Cards
@@ -76,12 +76,12 @@ export const Header = () => {
         <Typography
           variant="h6"
           sx={{
-            display: { xs: 'flex', md: 'none' },
+            // fontFamily: 'monospace',
+            // fontWeight: 700,
+            // color: 'inherit',
+            // textDecoration: 'none',
             flexGrow: 1,
-            fontFamily: 'monospace',
-            fontWeight: 700,
-            color: 'inherit',
-            textDecoration: 'none',
+            display: { xs: 'flex', md: 'none' },
           }}
         >
           Tyler's Holiday Cards
@@ -92,7 +92,7 @@ export const Header = () => {
           <Button
             key={page.name}
             onClick={() => { navigate(`${page.route}`); handleCloseNavMenu() }}
-            sx={{ my: 2, color: 'white', display: 'block' }}
+            sx={{  color: 'white', display: 'block' }}
           >
             {page.name}
           </Button>
