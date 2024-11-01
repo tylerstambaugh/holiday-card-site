@@ -7,12 +7,12 @@ export const Home: React.FC = () => {
 
     return (
         <Container >
-            <Box className='home-container'>
+            <Box className='container'>
                 <Grid container spacing={2} justifyContent={"center"} className='home-container'>
-                    <Grid size={{ xs: 10, md: 8 }}>
+                    <Grid size={{ xs: 10, md: 8 }} className='home-container'>
 
-                        <Typography variant="h3" align="center" className='home-title' >
-                            2024 <br /> Year In Review
+                        <Typography variant="h3" align="center" className='title' >
+                            2024 Year In Review
                         </Typography>
                         <Typography >It's been another fantastic year and it flew by quicker than the last. I started a new job in April with {" "}
                             <Link href={"http://www.redroverk12.com"} target={"_blank"}>

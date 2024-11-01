@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button } from "@mui/material"
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Container, Typography } from "@mui/material"
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -11,6 +11,7 @@ import Front2022 from '../assets/images/holiday-cards/2022_CreationOfBoone.jpg';
 import Back2022 from '../assets/images/holiday-cards/2022_CreationOfBoone_back.jpg';
 import Front2023 from '../assets/images/holiday-cards/2023_American_Gothic.jpg';
 import Back2023 from '../assets/images/holiday-cards/2023_American_Gothic_back.jpg';
+import "../App.css"
 
 
 type ArchiveItem = {
@@ -51,41 +52,44 @@ export const Archive: React.FC = () => {
         };
 
     return (
-        <div>
-
+        <Container className="container">
+            <Typography variant={"h3"} align={"center"} className={"title"}>Holiday Card Archives</Typography>
             {archiveItems.map((item: ArchiveItem, index) => (
-                <Accordion key={index} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
+                <Accordion key={index} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)} className="accordion">
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1-content"
                         id={`panel${index}-header`}
                         sx={{
                             '&.Mui-expanded': {
-                                backgroundColor: '#FFD700', // Style for expanded state
+                                backgroundColor: '#228B22 ', // Style for expanded state
                             },
-                            '&.Mui-collapsed': {
-                                backgroundColor: '#000', // Style for collapsed state
-                            },
-                           
+                            backgroundColor: '#8B0000  ', // Style for collapsed state
+
+
                         }}
+                        className="accordion-summary"
                     >
-                        {item.year}
+                        <Typography variant={"h5"} color="8B0000" align="center">
+
+                            {item.year}
+                        </Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
+                    <AccordionDetails className={"accordion-details"}>
                         <Box className={"archive-photo-box"}>
                             <ArchiveImage showBack={showPhotoBack} item={item} />
+                            <Button variant="contained" onClick={() => {
+                                setShowPhotoBack(!showPhotoBack)
+                            }}>
+                                {showPhotoBack ? "Show Front" : "Show Back"}
+                            </Button>
                         </Box>
-                        <Button variant="contained" onClick={() => {
-                            setShowPhotoBack(!showPhotoBack)
-                        }}>
-                            {showPhotoBack ? "Show Front" : "Show Back"}
-                        </Button>
                     </AccordionDetails>
                 </Accordion>
-    )
+            )
             )}
 
-        </div >
+        </Container >
     )
 
 }
@@ -99,13 +103,14 @@ const ArchiveImage = ({ showBack, item }: ArchiveImageProps) => {
 
     return (
         showBack ?
-            <Zoom>
+            <Zoom >
+                <Box className={"zoom-box"}>
 
                 <img src={item.photoBackPath} className="archive-photo" />
+                </Box>
             </Zoom>
             :
             <Zoom>
-
                 <img src={item.photoFrontPath} className="archive-photo" />
             </Zoom>
     )
