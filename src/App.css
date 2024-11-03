@@ -16,7 +16,7 @@ Silver: #C0C0C0 */
 html, body {
   font-family: -apple-system, monospace, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    background-image: url("./assets/images/background.jpg");
-  width: 100%;
+   margin: 0;
 }
 
 p {
@@ -28,8 +28,7 @@ p {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
- 
+  flex-grow: 1; 
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
@@ -46,6 +45,18 @@ p {
   height: fit-content;
   display: flex;  
   flex-direction: row;
+  color: beige ;
+}
+
+.header-title {
+  color: beige ;
+}
+
+.header-nav-buttons {
+  color: 'white'; 
+  display: 'block';
+   margin-left: 2;
+    border-bottom: "1px"
 }
 
 .footer {  
