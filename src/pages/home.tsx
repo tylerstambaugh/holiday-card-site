@@ -8,8 +8,8 @@ export const Home: React.FC = () => {
     return (
         <Container >
             <Box className='container'>
-                <Grid container spacing={2} justifyContent={"center"} className='home-container'>
-                    <Grid size={{ xs: 10, md: 8 }} className='home-container'>
+                <Grid container spacing={2} justifyContent={"center"}>
+                    <Grid size={{ xs: 10 }} className='home-container'>
 
                         <Typography variant="h3" align="center" className='title' >
                             2024 Year In Review

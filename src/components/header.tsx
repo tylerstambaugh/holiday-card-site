@@ -21,31 +21,13 @@ export const Header = () => {
   return (
 
     <Toolbar className="header">
-      <Link underline="none" color="inherit" href="/">
-        <Typography
-          variant="h3"
-          noWrap
-          sx={{
-            // mr: 2,
-            // fontFamily: 'monospace',
-            // fontWeight: 700,
-            // letterSpacing: '.3rem',
-            // color: 'inherit',
-            // textDecoration: 'none',
-            display: { xs: 'none', md: 'flex' },
-          }}
-        >
-          Tyler's Holiday Cards
-        </Typography>
-      </Link>
-
-      <Box sx={{  display: { md: 'none' } }}>
+      <Box sx={{ display: { md: 'none' } }}>
         <IconButton
           size="large"
           aria-controls="menu-appbar"
           aria-haspopup="true"
           onClick={handleOpenNavMenu}
-          color="inherit"
+          sx={{color: "beige"}}
         >
           <MenuIcon />
         </IconButton>
@@ -72,27 +54,50 @@ export const Header = () => {
           ))}
         </Menu>
       </Box>
-      <Link variant="h6" underline="none" color="inherit" href="/" >
+      <Link variant="h6" underline="none" color="inherit" href="/">
         <Typography
           variant="h6"
+          noWrap
+          className="header-title"
           sx={{
+            // mr: 2,
             // fontFamily: 'monospace',
             // fontWeight: 700,
+            // letterSpacing: '.3rem',
             // color: 'inherit',
             // textDecoration: 'none',
-            flexGrow: 1,
             display: { xs: 'flex', md: 'none' },
           }}
         >
           Tyler's Holiday Cards
         </Typography>
       </Link>
-      <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+
+
+      <Link variant="h3" underline="none" color="inherit" href="/" >
+        <Typography
+          variant="h3"
+          className="header-title"
+          sx={{
+            // fontFamily: 'monospace',
+            // fontWeight: 700,
+            // color: 'inherit',
+            // textDecoration: 'none',
+            flexGrow: 1,
+            display: { xs: 'none', md: 'flex' },
+          }}
+        >
+          Tyler's Holiday Cards
+        </Typography>
+      </Link>
+      <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}} >
         {pages.map((page) => (
           <Button
             key={page.name}
             onClick={() => { navigate(`${page.route}`); handleCloseNavMenu() }}
-            sx={{  color: 'white', display: 'block' }}
+            sx={{ color: 'white', display: 'block', marginLeft: 2}}
+            className={"header-nav-buttons"}
+            
           >
             {page.name}
           </Button>
