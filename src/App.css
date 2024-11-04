@@ -8,9 +8,9 @@ Silver: #C0C0C0 */
 
 
 
-#root {
+/* #root {
   display: flex;    
-}
+} */
 
 
 html, body {
@@ -55,8 +55,11 @@ p {
 .header-nav-buttons {
   color: 'white'; 
   display: 'block';
-   margin-left: 2;
-    border-bottom: "1px"
+  margin-left: 2;
+}
+
+.MuiMenu-list {
+  background-color: beige;
 }
 
 .footer {  
@@ -65,7 +68,7 @@ p {
   justify-content: center;
   text-align: center;
   color: black;
-  position: sticky;
+  position: sticky;  
 }
 
 p {
@@ -88,7 +91,6 @@ p {
   display: flex;
   text-align: center;
 }
-
 
 .accordion-details {
        justify-content: center;
@@ -113,7 +115,8 @@ p {
 .icon-container {  
    justify-content: center;
     background-color: beige;
-    padding-top: 1rem;
+    padding-top: 1rem
+    
 }
 
 .fa_icon {

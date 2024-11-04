@@ -6,21 +6,57 @@ import { Home } from './pages/home'
 import { Header } from './components/header'
 import { Footer } from './components/footer';
 import { Archive } from './pages/archive'
+import { Analytics } from '@vercel/analytics/react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { blue } from '@mui/material/colors';
 
+
+declare module '@mui/material/styles' {
+  interface Theme {
+    greenbutton: {
+      main: string;
+    };
+  }
+  interface ThemeOptions {
+    greenbutton?: {
+      main?: string;
+    };
+  }
+}
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main:
+        blue[500],
+    },
+    secondary: {
+      main: '#f44336',
+    },
+  },
+  greenbutton: {
+    main: '#228B22'
+  }
+},
+);
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
 root.render(
   <StrictMode>
-    <Router>
-      <div className="app">
-      <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/archive" element={<Archive />} />
-        </Routes>
-      <Footer />
-      </div>
-    </Router>
-  </StrictMode>,
+    <ThemeProvider theme={theme}>
+      <Router>
+        <div className="app">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/archive" element={<Archive />} />
+          </Routes>
+          <Footer />
+          <Analytics />
+        </div>
+      </Router>
+    </ThemeProvider>
+  </StrictMode>
+  ,
 )

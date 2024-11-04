@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Container, Typography } from "@mui/material"
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Container, Typography, useTheme } from "@mui/material"
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -22,6 +22,7 @@ type ArchiveItem = {
 export const Archive: React.FC = () => {
     const [showPhotoBack, setShowPhotoBack] = useState<boolean>(false);
     const [expanded, setExpanded] = React.useState<string | false>(false);
+    const theme = useTheme();
 
     const archiveItems: ArchiveItem[] = [
         {
@@ -62,9 +63,10 @@ export const Archive: React.FC = () => {
                         id={`panel${index}-header`}
                         sx={{
                             '&.Mui-expanded': {
-                                backgroundColor: '#228B22 ', // Style for expanded state
+                                backgroundColor: '#228B22', 
                             },
-                            backgroundColor: '#8B0000  ', // Style for collapsed state
+                            backgroundColor: '#8B0000',
+                            color: 'beige'
 
 
                         }}
@@ -78,17 +80,19 @@ export const Archive: React.FC = () => {
                     <AccordionDetails className={"accordion-details"}>
                         <Box className={"archive-photo-box"}>
                             <ArchiveImage showBack={showPhotoBack} item={item} />
-                            <Button variant="contained" onClick={() => {
+                            <Button  
+                            sx={{backgroundColor: theme.greenbutton.main}}
+                            variant="contained" 
+                            onClick={() => {
                                 setShowPhotoBack(!showPhotoBack)
                             }}>
-                                {showPhotoBack ? "Show Front" : "Show Back"}
+                                {showPhotoBack ? "Front" : "Back"}
                             </Button>
                         </Box>
                     </AccordionDetails>
                 </Accordion>
             )
             )}
-
         </Container >
     )
 
