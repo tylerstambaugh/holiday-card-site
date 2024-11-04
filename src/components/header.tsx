@@ -45,7 +45,8 @@ export const Header = () => {
           }}
           open={Boolean(anchorElNav)}
           onClose={handleCloseNavMenu}
-          sx={{ display: { xs: 'block', md: 'none' } }}
+          sx={{ display: { xs: 'block', md: 'none' }}}
+          
         >
           {pages.map((page) => (
             <MenuItem key={page.name} onClick={() => { navigate(`${page.route}`); handleCloseNavMenu() }}>
@@ -90,14 +91,13 @@ export const Header = () => {
           Tyler's Holiday Cards
         </Typography>
       </Link>
-      <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}} >
+      <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className={"header-nav-buttons"} >
         {pages.map((page) => (
           <Button
             key={page.name}
             onClick={() => { navigate(`${page.route}`); handleCloseNavMenu() }}
-            sx={{ color: 'white', display: 'block', marginLeft: 2}}
-            className={"header-nav-buttons"}
-            
+            sx={(theme) => ({  backgroundColor: theme.greenbutton.main,color: 'white', display: 'block', marginLeft: 2, borderBottom: "medium solid black",})}
+            className={"header-nav-buttons"}            
           >
             {page.name}
           </Button>

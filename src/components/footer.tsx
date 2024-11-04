@@ -11,12 +11,16 @@ import { Container, Stack } from '@mui/material';
 import '../App.css'
 
 export const Footer: React.FC = () => {
+
+  const currentYear: string = new Date(Date.now()).getFullYear().toString();
+
   return (
     <footer
       className={`footer`}
     >
       <hr />
       <Container>
+           
         <Stack
           className="icon-container" direction="row" spacing={2}
         >
@@ -52,7 +56,7 @@ export const Footer: React.FC = () => {
           </a>
         </Stack>
         <Stack className="text-center" sx={{ backgroundColor: "beige" }}>
-          <p>Copyright 2024 Tyler Stambaugh</p>
+          <p>Copyright {currentYear} Tyler Stambaugh</p>
         </Stack>
       </Container>
     </footer>
