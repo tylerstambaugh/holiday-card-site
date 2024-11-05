@@ -25,10 +25,10 @@ export const Footer: React.FC = () => {
           className="icon-container" direction="row" spacing={2}
         >
           <a
-            href="https://github.com/tylerstambaugh"
+            href="https://www.instagram.com/tyler_stambaugh/"
             target="_blank"
           >
-            <FontAwesomeIcon icon={faGithub} color="#333" size="2x" />
+            <FontAwesomeIcon icon={faInstagram} color="#c13584" size="2x" />
           </a>
           <a
             href="https://www.strava.com/athletes/381648"
@@ -36,11 +36,12 @@ export const Footer: React.FC = () => {
           >
             <FontAwesomeIcon icon={faStrava} color="#fc4c02" size="2x" />
           </a>
+
           <a
-            href="https://www.instagram.com/tyler_stambaugh/"
+            href="https://github.com/tylerstambaugh"
             target="_blank"
           >
-            <FontAwesomeIcon icon={faInstagram} color="#c13584" size="2x" />
+            <FontAwesomeIcon icon={faGithub} color="#333" size="2x" />
           </a>
           <a
             href="https://www.linkedin.com/in/tyler-stambaugh-b274a59/"

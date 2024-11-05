@@ -27,7 +27,7 @@ export const Header = () => {
           aria-controls="menu-appbar"
           aria-haspopup="true"
           onClick={handleOpenNavMenu}
-          sx={{color: "beige"}}
+          sx={{ color: "beige" }}
         >
           <MenuIcon />
         </IconButton>
@@ -45,8 +45,8 @@ export const Header = () => {
           }}
           open={Boolean(anchorElNav)}
           onClose={handleCloseNavMenu}
-          sx={{ display: { xs: 'block', md: 'none' }}}
-          
+          sx={{ display: { xs: 'block', md: 'none' } }}
+
         >
           {pages.map((page) => (
             <MenuItem key={page.name} onClick={() => { navigate(`${page.route}`); handleCloseNavMenu() }}>
@@ -96,8 +96,15 @@ export const Header = () => {
           <Button
             key={page.name}
             onClick={() => { navigate(`${page.route}`); handleCloseNavMenu() }}
-            sx={(theme) => ({  backgroundColor: theme.greenbutton.main,color: 'white', display: 'block', marginLeft: 2, borderBottom: "medium solid black",})}
-            className={"header-nav-buttons"}            
+            sx={(theme) => ({
+              backgroundColor: theme.greenbutton.main,
+              '&:hover': { backgroundColor: theme.greenbutton.hover },
+              color: 'beige',
+              display: 'block',
+              marginLeft: 2,
+              borderBottom: "medium solid black"
+            })}
+            className={"header-nav-buttons"}
           >
             {page.name}
           </Button>
