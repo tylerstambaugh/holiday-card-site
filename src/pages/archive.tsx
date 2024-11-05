@@ -63,7 +63,7 @@ export const Archive: React.FC = () => {
                         id={`panel${index}-header`}
                         sx={{
                             '&.Mui-expanded': {
-                                backgroundColor: '#228B22', 
+                                backgroundColor: '#228B22',
                             },
                             backgroundColor: '#8B0000',
                             color: 'beige'
@@ -80,12 +80,12 @@ export const Archive: React.FC = () => {
                     <AccordionDetails className={"accordion-details"}>
                         <Box className={"archive-photo-box"}>
                             <ArchiveImage showBack={showPhotoBack} item={item} />
-                            <Button  
-                            sx={{backgroundColor: theme.greenbutton.main}}
-                            variant="contained" 
-                            onClick={() => {
-                                setShowPhotoBack(!showPhotoBack)
-                            }}>
+                            <Button
+                                sx={{ backgroundColor: theme.greenbutton.main, '&:hover': { backgroundColor: theme.greenbutton.hover } }}
+                                variant="contained"
+                                onClick={() => {
+                                    setShowPhotoBack(!showPhotoBack)
+                                }}>
                                 {showPhotoBack ? "Front" : "Back"}
                             </Button>
                         </Box>
@@ -106,16 +106,16 @@ type ArchiveImageProps = {
 const ArchiveImage = ({ showBack, item }: ArchiveImageProps) => {
 
     return (
-        showBack ?
-            <Zoom >
-                <Box className={"zoom-box"}>
-
-                <img src={item.photoBackPath} className="archive-photo" />
-                </Box>
-            </Zoom>
-            :
-            <Zoom>
-                <img src={item.photoFrontPath} className="archive-photo" />
-            </Zoom>
+        <>
+            {showBack ? (
+                <Zoom>
+                    <img src={item.photoBackPath} className="archive-photo" />
+                </Zoom>
+            ) : (
+                <Zoom>
+                    <img src={item.photoFrontPath} className="archive-photo" />
+                </Zoom>
+            )}
+        </>
     )
 }
