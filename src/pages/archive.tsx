@@ -186,16 +186,17 @@ type ContentWarningProps = {
 }
 const ContentWarning = ({ showContentWarning, setShowContentWarning, setContentWarningApproved, panel, setExpanded }: ContentWarningProps) => {
 
+    const theme = useTheme();
     const style = {
         position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: "auto",
-        bgcolor: 'background.paper',
+        bgcolor: 'beige',
         border: '2px solid #000',
         boxShadow: 24,
-        p: 4,
+        p: 2,
     };
 
     return (
@@ -204,24 +205,36 @@ const ContentWarning = ({ showContentWarning, setShowContentWarning, setContentW
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
         >
-            <Box sx={style}>
+            <Box  sx={style}>
                 <Typography id="modal-modal-title" variant="h6" component="h2">
                     Content Warning
                 </Typography>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                <Typography id="modal-modal-description" sx={{ mt: 2, pb: 2}}>
                     Some individuals may find this content offensive. If you are concerned do not proceed.
                 </Typography>
-                <Stack>
+                <Stack spacing={1}>
                     <Button
+                        variant="contained"
                         onClick={() => {
                             setContentWarningApproved(true);
                             setShowContentWarning(false);
                             setExpanded(panel)
+                        }}
+                        sx={{
+                            backgroundColor: theme.greenbutton.main, '&:hover': {
+                                backgroundColor: theme.greenbutton.hover
+                            }
                         }}>
                         Proceed
                     </Button>
                     <Button
-                        onClick={() => setShowContentWarning(false)}>
+                        variant="contained"
+                        onClick={() => setShowContentWarning(false)}
+                        sx={{
+                            backgroundColor: theme.redbutton.main, '&:hover': {
+                                backgroundColor: theme.redbutton.hover
+                            }
+                        }}>
                         Cancel
                     </Button>
                 </Stack>

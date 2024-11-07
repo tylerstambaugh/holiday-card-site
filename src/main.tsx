@@ -17,9 +17,17 @@ declare module '@mui/material/styles' {
       main: string;
       hover: string;
     };
+    redbutton: {
+      main: string;
+      hover: string;
+    };
   }
   interface ThemeOptions {
     greenbutton?: {
+      main?: string;
+      hover?: string
+    };
+    redbutton?: {
       main?: string;
       hover?: string
     };
@@ -39,6 +47,10 @@ const theme = createTheme({
   greenbutton: {
     main: '#228B22',
     hover: '#1c721c'
+  },
+  redbutton: {
+    main: '#8B0000',
+    hover: '#660505'
   }
 },
 );

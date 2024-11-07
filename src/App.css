@@ -112,6 +112,14 @@ p {
   max-height: 350px;
 }
 
+.current-year-photo {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  width: auto;
+  margin-left: auto;
+}
+
 .icon-container {  
    justify-content: center;
     background-color: beige;
