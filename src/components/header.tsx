@@ -50,7 +50,9 @@ export const Header = () => {
         >
           {pages.map((page) => (
             <MenuItem key={page.name} onClick={() => { navigate(`${page.route}`); handleCloseNavMenu() }}>
-              <Typography sx={{ textAlign: 'center' }}>{page.name}</Typography>
+              <Typography sx={{
+                textAlign: 'center', 
+              }}>{page.name}</Typography>
             </MenuItem>
           ))}
         </Menu>
