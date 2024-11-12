@@ -23,7 +23,6 @@ p {
   color: #000;
 }
 
-
 .app {
   min-height: 100vh;
   display: flex;
@@ -93,14 +92,14 @@ p {
 }
 
 .accordion-details {
-       justify-content: center;
+  justify-content: center;
   display: flex;
   text-align: center;
   background-color: beige;
 }
 
 .zoom-photo-box {
-         justify-content: center;
+  justify-content: center;
   display: flex;
   text-align: center;
   background-color: beige;
