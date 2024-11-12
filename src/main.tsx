@@ -7,53 +7,11 @@ import { Header } from './components/header'
 import { Footer } from './components/footer';
 import { Archive } from './pages/archive'
 import { Analytics } from '@vercel/analytics/react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { blue } from '@mui/material/colors';
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from './theme'
+import ReactGA4 from 'react-ga4';
 
-
-declare module '@mui/material/styles' {
-  interface Theme {
-    greenbutton: {
-      main: string;
-      hover: string;
-    };
-    redbutton: {
-      main: string;
-      hover: string;
-    };
-  }
-  interface ThemeOptions {
-    greenbutton?: {
-      main?: string;
-      hover?: string
-    };
-    redbutton?: {
-      main?: string;
-      hover?: string
-    };
-  }
-}
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main:
-        blue[500],
-    },
-    secondary: {
-      main: '#f44336',
-    },
-  },
-  greenbutton: {
-    main: '#228B22',
-    hover: '#1c721c'
-  },
-  redbutton: {
-    main: '#8B0000',
-    hover: '#660505'
-  }
-},
-);
+ReactGA4.initialize("G-8XM0MY1NDQ");
 
 const container = document.getElementById('root');
 const root = createRoot(container!);

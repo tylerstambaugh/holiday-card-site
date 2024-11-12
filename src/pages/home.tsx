@@ -1,8 +1,20 @@
 import { Box, Container, Grid2 as Grid, Link, Stack, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../App.css'
+import { useLocation } from 'react-router-dom';
+import ReactGA4 from 'react-ga4';
 
 export const Home: React.FC = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        ReactGA4.send({
+            hitType: 'pageview',
+            page_path: location.pathname,
+            page_title: document.title,
+        });
+    }, [location]);
+
 
 
     return (
