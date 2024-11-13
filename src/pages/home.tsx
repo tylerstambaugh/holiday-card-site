@@ -1,12 +1,12 @@
 import { Box, Container, Grid2 as Grid, Link, Stack, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import '../App.css'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import ReactGA4 from 'react-ga4';
 
 export const Home: React.FC = () => {
     const location = useLocation();
-
+    const navigate = useNavigate();
     useEffect(() => {
         ReactGA4.send({
             hitType: 'pageview',
@@ -57,7 +57,8 @@ export const Home: React.FC = () => {
                             <Stack>
                                 <Typography>
                                     Before you go, be sure to check out the {" "}
-                                    <Link href={"/archive"}>
+                                    <Link onClick={() => {
+                                        navigate(`/archive`)}}>
                                         archives
                                     </Link>.
                                 </Typography>
