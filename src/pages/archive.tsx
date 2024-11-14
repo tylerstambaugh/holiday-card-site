@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Container, Link, Modal, Stack, Typography, useTheme } from "@mui/material"
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
@@ -14,9 +14,7 @@ import Back2023 from '../assets/images/holiday-cards/2023_American_Gothic_back.j
 import Front2024 from "../assets/images/holiday-cards/2024_Back_Catalogue.jpg";
 import Back2024 from "../assets/images/holiday-cards/2024_Back_Catalogue_Back.jpg"
 import "../App.css"
-import { useLocation } from "react-router-dom";
 import ReactGA4 from 'react-ga4';
-
 type ArchiveItem = {
     photoFrontPath: string;
     photoBackPath: string;
@@ -25,15 +23,8 @@ type ArchiveItem = {
     requireWarning: boolean
 }
 export const Archive: React.FC = () => {
-    const location = useLocation();
 
-    useEffect(() => {
-        ReactGA4.send({
-            hitType: 'pageview',
-            page_path: location.pathname,
-            page_title: document.title,
-        });
-    }, [location]);
+
 
     const [showPhotoBack, setShowPhotoBack] = useState<boolean>(false);
     const [expanded, setExpanded] = React.useState<string | false>(false);
@@ -144,9 +135,8 @@ export const Archive: React.FC = () => {
                                         setShowPhotoBack(!showPhotoBack);
                                         ReactGA4.send({
                                             hitType: 'event',
-                                            event_category: 'button_click',
-                                            event_action: 'button_clicked',
-                                            event_label: 'Show Front/Back Button Click',
+                                            eventCategory: 'button_click',
+                                            eventAction: 'Show Front/Back Button Click',
                                         });
                                     }}>
                                     {showPhotoBack ? "Show Front" : "Show Back"}
