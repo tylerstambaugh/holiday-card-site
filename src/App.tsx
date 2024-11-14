@@ -8,9 +8,10 @@ import { Archive } from './pages/archive'
 import { Analytics } from '@vercel/analytics/react';
 
 export default function App ()  {
-    usePageTracking();
-
+   usePageTracking();
+   
     return (
+        
                 <div className="app">
                     <Header />
                     <Routes>
