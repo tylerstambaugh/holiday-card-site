@@ -4,7 +4,7 @@ import React from "react";
 import "../App.css"
 import { useNavigate } from "react-router-dom";
 
-const pages = [{ name: 'Home', route: '/' }, { name: 'Archive', route: '/archive' }];
+const pages = [{ name: 'Home', route: '/' }, { name: 'Archives', route: '/archive' }];
 
 
 export const Header = () => {
