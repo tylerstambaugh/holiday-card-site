@@ -31,9 +31,9 @@ export const Home: React.FC = () => {
                                 <Typography>
                                     It's been another fantastic year and it flew by quicker than the last. I started a new job in April with{' '}
                                     <Link href={"http://www.redroverk12.com"} target={"_blank"}>
-                                        Red Rover
+                                        Red Rover 
                                     </Link>{' '}
-                                    and have settled in nicely. It is fully remote, so I get to stay home and develope software solutions. Usually I'll take{' '}
+                                        as a software developer and have settled in nicely. Being that it is fully remote, usually I'll take{' '}
                                     <Link href={"https://youtube.com/shorts/TyLCEsu_g54?feature=share"} target={"_blank"}>
                                         Ol Man Boone for exercise
                                     </Link>{' '}
@@ -44,7 +44,10 @@ export const Home: React.FC = () => {
                                     <Link href="https://youtu.be/QQHHL25VDOU" target={"_blank"}>
                                         spill at the velodrome.
                                     </Link>{' '}
-                                    They say time heals all wounds and that is proving to be the case. Cindy and I continue to{' '}
+                                   I've healed up pretty nicely and have some gnarly scars as reminders of how quickly things can go sideways. Cindy took a spill too during a relay bike race in September. 
+                                   She got bucked out of the saddle, bonged her melon,
+                                    got up and dusted herself off before finishing her leg of the race and we still finished 1st. 
+                                     Most of the time we though we{' '}
                                     <Link href={"https://youtube.com/shorts/6ME0bnRGTDc?feature=share"} target={"_blank"}>
                                         adventure around
                                     </Link>{' '}
@@ -52,7 +55,7 @@ export const Home: React.FC = () => {
                                 </Typography>
                             </Box>
                             <Stack justifyContent="center" spacing={2}>
-                                <Typography>Thanks for stopping by and catching up. We hope you enjoy the cards as much as we like coming up with them and creating them.</Typography>
+                                <Typography>Thanks for stopping by and catching up. We hope you enjoy the cards as much as we like making them.</Typography>
                             </Stack>
                             <Stack>
                                 <Typography>
