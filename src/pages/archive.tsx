@@ -14,7 +14,7 @@ import Back2023 from '../assets/images/holiday-cards/2023_American_Gothic_back.j
 import Front2024 from "../assets/images/holiday-cards/2024_Back_Catalogue.jpg";
 import Back2024 from "../assets/images/holiday-cards/2024_Back_Catalogue_Back.jpg";
 import Front2025 from "../assets/images/holiday-cards/2025_Falkore_Front.jpg";
-import Back2025 from "../assets/images/holiday-cards/2025_Falkore_Back.jpg";
+import Back2025 from "../assets/images/holiday-cards/2025_Falkore.jpg";
 import "../App.css"
 import ReactGA4 from 'react-ga4';
 type ArchiveItem = {
