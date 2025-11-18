@@ -26,32 +26,13 @@ export const Home: React.FC = () => {
                         <Stack direction={"column"} spacing={2}>
                             <Box>
                                 <Typography variant="h3" align="center" className='title'>
-                                    2024 Year In Review
+                                    2025 Year In Review
                                 </Typography>
                                 <Typography>
-                                    It's been another fantastic year and it flew by quicker than the last. I started a new job in April with{' '}
-                                    <Link href={"http://www.redroverk12.com"} target={"_blank"}>
-                                        Red Rover 
-                                    </Link>{' '}
-                                        as a software developer and have settled in nicely. Being that it is fully remote, usually I'll take{' '}
-                                    <Link href={"https://youtube.com/shorts/TyLCEsu_g54?feature=share"} target={"_blank"}>
-                                        Ol Man Boone for exercise
-                                    </Link>{' '}
-                                    at the park over lunch.
-                                </Typography>
-                                <Typography>
-                                    There's been a whole lotta bike riding going on, with a couple of mishaps along the way. In early April I was hit by a car and got pretty banged up and then six weeks later got tangled up in a nasty{' '}
-                                    <Link href="https://youtu.be/QQHHL25VDOU" target={"_blank"}>
-                                        spill at the velodrome.
-                                    </Link>{' '}
-                                   I've healed up pretty nicely and have some gnarly scars as reminders of how quickly things can go sideways. Cindy took a spill too during a relay bike race in September. 
-                                   She got bucked out of the saddle, bonged her melon,
-                                    got up and dusted herself off before finishing her leg of the race and we still finished 1st. 
-                                     Most of the time we though we{' '}
-                                    <Link href={"https://youtube.com/shorts/6ME0bnRGTDc?feature=share"} target={"_blank"}>
-                                        adventure around
-                                    </Link>{' '}
-                                    central Indiana exploring all the sceneries and little towns by bike.
+                                    Happy holidays from our family to yours! As we wrap up another year, we wanted to take a moment to reflect on the highlights and memorable moments that made 2025 special for us.
+                                    The biggest news to report on is that Tyler moved to Bloomington to be closer to Cindy. Whiles Indianapolis has its charm, being able to spend more time together has been the best gift of all. Additionally, since we spend most of our free time riding bicycles, it made sense to be closer to some of the best routes in the state. 
+                                    The adjustment was really smooth given Bloomington is where we were both born and are familiar with the town. We spent a good part of the year doing some renovations and have turned the house into a home.
+                                     Boone has adapted well to the new environment, he loves going for walks around campus. We hope you all are doing well too and look forward to hearing from you soon.
                                 </Typography>
                             </Box>
                             <Stack justifyContent="center" spacing={2}>
