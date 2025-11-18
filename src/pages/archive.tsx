@@ -74,7 +74,7 @@ export const Archive: React.FC = () => {
             photoBackPath: Back2025,
             year: 2025,
             projectInspiration: "https://almatcboykin.wordpress.com/2021/05/24/fulcher-falcor-the-luck-dragon-and-a-neverending-story/",
-            requireWarning: true
+            requireWarning: false
         },
     ]
     const handleChange = (panel: string, requireWarning: boolean) => {
