@@ -30,7 +30,7 @@ export const Home: React.FC = () => {
                                 </Typography>
                                 <Typography>
                                     Happy holidays from our family to yours! As we wrap up another year, we wanted to share little bit about what we've been up to.
-                                    The biggest news to report on is that Tyler moved to Bloomington to be closer to Cindy. While Indianapolis was fine for the last 20 years, with his new job being fully remote there was nothing keeping himm there. 
+                                    The biggest news to report on is that Tyler moved to Bloomington to be closer to Cindy. While Indianapolis was fine for the last 20 years, with his new job being fully remote there was nothing keeping him there. 
                                     Being able to spend more time together has been the best gift of all. 
                                     Additionally, since we spend most of our free time riding bicycles, it made sense to be closer to some of the best routes in the state. 
                                     The adjustment was really smooth given Bloomington is where we were both born and that we are familiar with the town. We spent a good part of the year doing some renovations and have turned the house into a home.
