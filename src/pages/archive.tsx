@@ -73,7 +73,7 @@ export const Archive: React.FC = () => {
             photoFrontPath: Front2025,
             photoBackPath: Back2025,
             year: 2025,
-            projectInspiration: "https://en.wikipedia.org/wiki/The_NeverEnding_Story_(film)",
+            projectInspiration: "https://theneverendingstory.fandom.com/wiki/The_NeverEnding_Story_(film)",
             requireWarning: false
         },
     ]
