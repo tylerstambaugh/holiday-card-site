@@ -61,11 +61,11 @@ export const Home: React.FC = () => {
                                 <Typography variant="h6" align="center" className='title'>
                                    A couple of quick videos from our year:
                                 </Typography>
-                                <Stack spacing={2} justifyContent="center" alignItems="center">
-                                <ReactPlayer width="450px" height="500px" controls={true} src='https://youtube.com/shorts/MbzsFOroJiI?si=hOMaEB3rcuw4Oeki' />
-                                <ReactPlayer width="450px" height="500px" controls={true} src='https://youtube.com/shorts/ia1G9tmhZb4?si=2JzX8BfTxhkL7YjK' />
-                                <ReactPlayer width="450px" height="500px" controls={true} src='https://youtube.com/shorts/Qw_bTXKwCoE?si=irvfk8KYYBBaf0rf' />
-                                <ReactPlayer width="450px" height="500px" controls={true} src='https://youtube.com/shorts/hf4qnYNtwb0?si=YzG-tLoJ2yiv6VTn' />
+                                <Stack spacing={2} justifyContent="center" alignItems="center" padding={1}>
+                                <ReactPlayer width="400px" height="400px" controls={true} src='https://youtube.com/shorts/MbzsFOroJiI?si=hOMaEB3rcuw4Oeki' />
+                                <ReactPlayer width="400px" height="400px" controls={true} src='https://youtube.com/shorts/ia1G9tmhZb4?si=2JzX8BfTxhkL7YjK' />
+                                <ReactPlayer width="400px" height="400px" controls={true} src='https://youtube.com/shorts/Qw_bTXKwCoE?si=irvfk8KYYBBaf0rf' />
+                                <ReactPlayer width="400px" height="400px" controls={true} src='https://youtube.com/shorts/hf4qnYNtwb0?si=YzG-tLoJ2yiv6VTn' />
                                 </Stack>
                             </Stack>
                         </Stack>
