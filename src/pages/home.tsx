@@ -35,7 +35,7 @@ export const Home: React.FC = () => {
                                     Being able to spend more time together has been the best gift of all. 
                                     Additionally, since we spend most of our free time riding bicycles, it made sense to be closer to some of the best routes in the state. 
                                     The adjustment was really smooth given Bloomington is where we were both born and that we are familiar with the town. We spent a good part of the year doing some renovations and have turned the house into a home. We've been enjoying exploring the myriad of restaurants in town,
-                                    and and seeing Cindy's father play guitar at Trailhead Pizza where you can order whatever you want and you'll likely be surprised with what you get.
+                                    and seeing Cindy's father play guitar at Trailhead Pizza where you can order whatever you want and you'll likely be surprised with what you get.
                                     Ol Boone has adapted well to the new environment, we frequently take him for walks around the Indiana University campus and he's made some friends at the walk-up ice cream stand where they love serving him pup cups.
                                     We hope you all are doing well too and look forward to hearing from you soon.
                                 </Typography>
