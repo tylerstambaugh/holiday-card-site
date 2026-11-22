@@ -27,7 +27,7 @@ export const Home: React.FC = () => {
                         <Stack direction={"column"} spacing={2}>
                             <Box>
                                 <Typography variant="h3" align="center" className='title'>
-                                    2025 Year In Review
+                                    2026 Year In Review
                                 </Typography>
                                 <Typography>
                                     Seasons greetings from the Hoosier state.  As the year draws towards a close, we wanted to share a little about what we've been up to. Cindy and Tyler have been keeping busy with work and cycling while making sure "Ol Man Boone" gets plenty of walks and treats.  Both 
