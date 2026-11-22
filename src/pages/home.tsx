@@ -30,18 +30,18 @@ export const Home: React.FC = () => {
                                     2025 Year In Review
                                 </Typography>
                                 <Typography>
-                                    Happy holidays from our family to yours! As we wrap up another year, we wanted to share little bit about what we've been up to.
-                                    The biggest news to report on is that Tyler moved to Bloomington to be closer to Cindy. While Indianapolis was fine for the last 20 years, with his new job being fully remote there was nothing keeping him there. 
-                                    Being able to spend more time together has been the best gift of all. 
-                                    Additionally, since we spend most of our free time riding bicycles, it made sense to be closer to some of the best routes in the state. 
-                                    The adjustment was really smooth given Bloomington is where we were both born and that we are familiar with the town. We spent a good part of the year doing some renovations and have turned the house into a home. We've been enjoying exploring the myriad of restaurants in town,
-                                    and seeing Cindy's father play guitar at Trailhead Pizza where you can order whatever you want and you'll likely be surprised with what you get.
-                                    Ol Boone has adapted well to the new environment, we frequently take him for walks around the Indiana University campus and he's made some friends at the walk-up ice cream stand where they love serving him pup cups.
-                                    We hope you all are doing well too and look forward to hearing from you soon.
-                                </Typography>
+                                    Seasons greetings from the Hoosier state.  As the year draws towards a close, we wanted to share a little about what we've been up to. Cindy and Tyler have been keeping busy with work and cycling while making sure "Ol Man Boone" gets plenty of walks and treats.  Both 
+                                    Tyler and Cindy climbed enough hills on our bikes to have reached outer space when all summed up.  We also are excited to share that we've launched a side project we've been working on for quite a while. 
+                                    Combining Cindy's Strava prowess and creativity along with Tyler's abilities of turning ideas into realities, we have released <Link onClick={() => {
+                                        window.open(`https://www.segmentsniper.com`, `_blank`)
+                                    }} target="_blank" rel="noopener noreferrer">
+                                        Segment Sniper
+                                    </Link> to the public. While a bit niche and specific, we have gotten over 100 registered users but our balance sheet has yet to climb into the black. 
+                                    
+                                </Typography>                                                                 
                             </Box>
                             <Stack justifyContent="center" spacing={2}>
-                                <Typography>Thanks for stopping by and catching up. We hope you enjoy the cards as much as we like making them.</Typography>
+                                <Typography>We hope you've had a good year and look forward to staying in touch.</Typography>
                             </Stack>
                             <Stack>
                                 <Typography>
@@ -62,10 +62,9 @@ export const Home: React.FC = () => {
                                    A couple of quick videos from our year:
                                 </Typography>
                                 <Stack spacing={2} justifyContent="center" alignItems="center" padding={1}>
-                                <ReactPlayer width="400px" height="400px" controls={true} src='https://youtube.com/shorts/MbzsFOroJiI?si=hOMaEB3rcuw4Oeki' />
-                                <ReactPlayer width="400px" height="400px" controls={true} src='https://youtube.com/shorts/ia1G9tmhZb4?si=2JzX8BfTxhkL7YjK' />
-                                <ReactPlayer width="400px" height="400px" controls={true} src='https://youtube.com/shorts/Qw_bTXKwCoE?si=irvfk8KYYBBaf0rf' />
-                                <ReactPlayer width="400px" height="400px" controls={true} src='https://youtube.com/shorts/hf4qnYNtwb0?si=YzG-tLoJ2yiv6VTn' />
+                                <ReactPlayer width="400px" height="400px" controls={true} src='https://youtube.com/shorts/dGDRrUoXi20' />
+                                <ReactPlayer width="400px" height="400px" controls={true} src='https://youtube.com/shorts/K2CCf-JiCDU' />
+                                <ReactPlayer width="400px" height="400px" controls={true} src='https://www.youtube.com/shorts/X2CYTfTu168' />
                                 </Stack>
                             </Stack>
                         </Stack>
