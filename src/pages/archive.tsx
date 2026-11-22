@@ -15,6 +15,8 @@ import Front2024 from "../assets/images/holiday-cards/2024_Back_Catalogue.jpg";
 import Back2024 from "../assets/images/holiday-cards/2024_Back_Catalogue_Back.jpg";
 import Back2025 from "../assets/images/holiday-cards/2025_NES_Front.jpg";
 import Front2025 from "../assets/images/holiday-cards/2025_NES_Back.jpg";
+import Front2026 from "../assets/images/holiday-cards/2026_LegendOfZelda_Front.jpg";
+import Back2026 from "../assets/images/holiday-cards/2026_LegendOfZelda_Back.jpg";
 import "../App.css"
 import ReactGA4 from 'react-ga4';
 type ArchiveItem = {
@@ -69,11 +71,18 @@ export const Archive: React.FC = () => {
             projectInspiration: "https://www.frontpagenewsmusic.com/post/the-back-story-behind-that-pink-floyd-back-catalogue-poster",
             requireWarning: true
         },
-                {
+        {
             photoFrontPath: Front2025,
             photoBackPath: Back2025,
             year: 2025,
             projectInspiration: "https://theneverendingstory.fandom.com/wiki/The_NeverEnding_Story_(film)",
+            requireWarning: false
+        },
+        {
+            photoFrontPath: Front2026,
+            photoBackPath: Back2026,
+            year: 2026,
+            projectInspiration: "https://en.wikipedia.org/wiki/Star_Wars",
             requireWarning: false
         },
     ]
