@@ -16,8 +16,6 @@ export const Home: React.FC = () => {
         });
     }, [location]);
 
-
-
     return (
         <Container >
             <Box className='container'>
@@ -31,13 +29,12 @@ export const Home: React.FC = () => {
                                 </Typography>
                                 <Typography>
                                     Seasons greetings from the Hoosier state.  As the year draws towards a close, we wanted to share a little about what we've been up to. Cindy and Tyler have been keeping busy with work and cycling while making sure "Ol Man Boone" gets plenty of walks and treats.  Both 
-                                    Tyler and Cindy climbed enough hills on our bikes to have reached outer space when all summed up.  We also are excited to share that we've launched a side project we've been working on for quite a while. 
+                                    Tyler and Cindy climbed enough hills on our bikes to have reached outer space when all summed up (that's over 330,000 vertical feet and counting).  We're also excited to share that we have launched a side project we've been working on for quite a while. 
                                     Combining Cindy's Strava prowess and creativity along with Tyler's abilities of turning ideas into realities, we have released <Link onClick={() => {
-                                        window.open(`https://www.segmentsniper.com`, `_blank`)
+                                        window.open(`https://www.segmentsniper.com/about`, `_blank`)
                                     }} target="_blank" rel="noopener noreferrer">
                                         Segment Sniper
-                                    </Link> to the public. While a bit niche and specific, we have gotten over 100 registered users but our balance sheet has yet to climb into the black. 
-                                    
+                                    </Link> to the public. While a bit niche and tailored to a specific audience, we have gotten over 110 registered users but our balance sheet has yet to climb into the black.                                    
                                 </Typography>                                                                 
                             </Box>
                             <Stack justifyContent="center" spacing={2}>
@@ -73,5 +70,4 @@ export const Home: React.FC = () => {
             </Box>
         </Container>
     )
-
 }
